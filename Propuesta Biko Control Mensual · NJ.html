@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Propuesta Biko Control Mensual · NJ</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--k:#242323;--b:#E9E1D4;--br:#8A674B;--bm:#CBBBA5;--g:#716B64;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+*{box-sizing:border-box}
+body{margin:0;background:var(--k);font-family:Manrope,system-ui,Arial,sans-serif;color:var(--k);line-height:1.65;font-size:17px}
+.pg{max-width:980px;margin:0 auto;padding:clamp(32px,7vw,88px) clamp(22px,6vw,72px);position:relative}
+.light{background:var(--b)}.dark{background:var(--k);color:var(--b)}
+h1,h2,h3{font-family:'Archivo Black','Arial Black',Impact,sans-serif;font-weight:400;margin:0;line-height:1.02;letter-spacing:-.015em}
+h1{font-size:clamp(46px,10vw,104px)}
+h2{font-size:clamp(32px,6vw,56px);margin-bottom:28px}
+h3{font-size:22px}
+p{margin:0 0 16px;max-width:60ch}
+.eye{font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--br);margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.eye:before{content:"";width:36px;height:2px;background:currentColor}
+.dark .eye{color:var(--bm)}
+.lead{font-size:clamp(19px,2.6vw,24px);font-weight:500;line-height:1.5}
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between}
+.cover img{width:76px;height:76px;display:block}
+.cover .sub{font-size:clamp(18px,2.6vw,24px);color:var(--bm);margin-top:30px;max-width:30ch}
+.meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--bm);border-top:1px solid var(--g);padding-top:18px}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:28px;border-top:2px solid var(--k)}
+.step{padding:22px 22px 22px 0;border-right:1px solid var(--bm)}
+.step:last-child{border-right:0}
+.step b{font-family:'Archivo Black',sans-serif;font-weight:400;color:var(--br);font-size:34px;display:block}
+.step h3{font-size:19px;margin:6px 0}
+.step p{font-size:15px;color:var(--g)}
+.kp{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.kp span{background:var(--k);color:var(--b);padding:8px 16px;font-weight:800;letter-spacing:.12em;font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
+.card{background:var(--b);color:var(--k);padding:30px 26px;display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border-top:6px solid var(--bm)}
+.card.mid{background:var(--br);color:#fff;border-top-color:var(--b)}
+.card.top{border-top-color:var(--br)}
+.card .for{font-size:15px;opacity:.85;min-height:3.4em}
+.card .price{font-family:'Archivo Black',sans-serif;font-size:56px;line-height:1;margin:14px 0 2px}
+.card small{font-size:13px;opacity:.8;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.card ul{list-style:none;padding:0;margin:20px 0 0}
+.card li{padding:8px 0 8px 22px;border-top:1px solid rgba(36,35,35,.2);font-size:15px;position:relative}
+.card.mid li{border-top-color:rgba(255,255,255,.3)}
+.card li:before{content:"";position:absolute;left:0;top:17px;width:9px;height:9px;background:currentColor;opacity:.7}
+.card .inc{font-weight:800;font-size:14px;margin-top:18px}
+.tag{align-self:flex-start;background:var(--k);color:var(--b);font-size:11px;font-weight:800;letter-spacing:.16em;padding:4px 10px;margin-bottom:12px}
+.scroll{overflow-x:auto;margin-top:30px}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+th,td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--bm)}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--br)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;margin-top:10px}
+.two h3{margin-bottom:12px;color:var(--b)}
+.two p{color:var(--bm)}
+.rule{border:0;border-top:1px solid var(--g);margin:36px 0}
+.cond{list-style:none;padding:0;margin:0}
+.cond li{padding:11px 0;border-bottom:1px solid var(--bm)}
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:26px 0}
+.road div{border-top:3px solid var(--br);padding-top:10px;font-weight:700;font-size:15px}
+.road span{display:block;font-family:'Archivo Black',sans-serif;color:var(--br);font-size:22px}
+.close{font-family:'Archivo Black',sans-serif;font-size:clamp(22px,3.6vw,34px);line-height:1.2;margin:48px 0 0;max-width:26em}
+.foot{margin-top:44px;font-size:13px;color:var(--g);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.note{font-size:13px;color:var(--g)}
+@media print{
+ @page{size:A4;margin:0}
+ body{font-size:13.5px}
+ .pg{max-width:none;padding:44px 52px;break-after:page;page-break-after:always}
+ .cover{min-height:290mm}
+ .step,.cond li,.road div{break-inside:avoid}
+ h1{font-size:76px}h2{font-size:38px}
+ .card .price{font-size:44px}
+ .scroll{overflow:visible}table{min-width:0}
+}
+</style></head><body>
+
+<section class="pg dark cover">
+<img src="data:image/png;base64,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" alt="Biko">
+<div>
+<div class="eye">Biko Tech &amp; Business Solutions</div>
+<h1>Más claridad sobre tu negocio.</h1>
+<p class="sub">Soluciones personalizadas para el control mensual de NJ.</p>
+</div>
+<div class="meta"><span>Propuesta para NJ</span><span>Biko Control Mensual</span><span>10 de octubre de 2026</span></div>
+</section>
+
+<section class="pg light">
+<div class="eye">01 · Entendemos tu necesidad</div>
+<h2>Saber cómo te fue, sin complicarte.</h2>
+<p class="lead">Hoy llevas el registro de NJ en un cuaderno. Quieres saber, al cierre de cada mes, cuánto vendiste, cuánto gastaste y qué resultado obtuviste.</p>
+<p>Tampoco quieres depender de Excel ni hacer sumas a mano. Buscas algo sencillo, que ordene tus datos y calcule por ti. Eso es exactamente lo que construiremos: una herramienta adaptada a tu forma de trabajar, no al revés.</p>
+<p class="note">Rubro, volumen de operaciones y demás detalles se confirmarán contigo antes de definir el alcance final.</p>
+</section>
+
+<section class="pg dark">
+<div class="eye">02 · La solución</div>
+<h2>De tus registros a un resumen mensual automático.</h2>
+<p class="lead" style="color:var(--bm)">Registras. La herramienta calcula. Tú consultas.</p>
+<div class="flow" style="border-top-color:var(--g)">
+<div class="step" style="border-right-color:var(--g)"><b>01</b><h3>Registras</h3><p style="color:var(--bm)">Anotas tus ventas y gastos de forma ordenada.</p></div>
+<div class="step" style="border-right-color:var(--g)"><b>02</b><h3>Se calcula</h3><p style="color:var(--bm)">Los totales se actualizan solos, sin fórmulas que tocar.</p></div>
+<div class="step"><b>03</b><h3>Consultas</h3><p style="color:var(--bm)">Al cierre del mes ves tu resumen claro.</p></div>
+</div>
+<div class="kp"><span>VENTAS</span><span>GASTOS</span><span>RESULTADO MENSUAL</span></div>
+<p class="note" style="color:var(--bm);margin-top:22px">El resultado mensual se calcula con lo que registres como ventas y gastos. No es una utilidad contable o tributaria ni reemplaza a un contador. La herramienta se desarrollará en Excel o Google Sheets, según tus condiciones de uso.</p>
+</section>
+
+<section class="pg light" style="break-before:page">
+<div class="eye">03 · Alternativas</div>
+<h2>Tres niveles, un mismo objetivo.</h2>
+<p>Las tres opciones te permiten consultar ventas, gastos y resultado mensual. Cambia el nivel de automatización, visualización y control. Precios por implementación única.</p>
+<div class="cards">
+<div class="card"><h3>Control Esencial</h3><p class="for">Para comenzar a organizar los números del negocio.</p><div class="price">S/300</div><small>Implementación única</small>
+<ul><li>Registro de ventas y gastos</li><li>Cálculos automáticos</li><li>Resumen mensual de ventas, gastos y resultado</li><li>Plantilla personalizada y sencilla</li><li>Instrucciones básicas de uso</li></ul></div>
+<div class="card mid"><span class="tag">MÁS COMPLETO PARA EMPEZAR</span><h3>Control Inteligente</h3><p class="for">Para tener una visión más clara y organizada del negocio.</p><div class="price">S/600</div><small>Implementación única</small>
+<div class="inc">Todo lo de Esencial, más:</div>
+<ul><li>Categorías personalizadas de ventas y gastos</li><li>Dashboard visual con indicadores y gráficos</li><li>Historial de meses anteriores</li><li>Comparación entre periodos</li><li>Validaciones para reducir errores de registro</li></ul></div>
+<div class="card top"><h3>Control Avanzado</h3><p class="for">Para simplificar más tareas y contar con mayores controles.</p><div class="price">S/900</div><small>Implementación única</small>
+<div class="inc">Todo lo de Inteligente, más:</div>
+<ul><li>Automatizaciones adicionales</li><li>Registro simplificado con formularios u otros mecanismos viables</li><li>Filtros y visualizaciones adicionales</li><li>Macros o funciones avanzadas cuando sean necesarias</li><li>Protección de celdas y controles adicionales</li></ul></div>
+</div>
+<div class="scroll"><table>
+<tr><th>Comparación</th><th>Esencial</th><th>Inteligente</th><th>Avanzado</th></tr>
+<tr><td>Ventas, gastos y resultado mensual</td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>Dashboard y gráficos</td><td>—</td><td>●</td><td>●</td></tr>
+<tr><td>Historial y comparación de periodos</td><td>—</td><td>●</td><td>●</td></tr>
+<tr><td>Validaciones anti-errores</td><td>—</td><td>●</td><td>●</td></tr>
+<tr><td>Formularios, filtros y automatizaciones</td><td>—</td><td>—</td><td>●</td></tr>
+<tr><td>Protección de celdas y controles</td><td>—</td><td>—</td><td>●</td></tr>
+</table></div>
+<p class="note" style="margin-top:16px">El alcance exacto de cada opción se confirma contigo antes de iniciar.</p>
+</section>
+
+<section class="pg dark">
+<div class="eye">04 · Acompañamiento</div>
+<h2>No te dejamos solo con la herramienta.</h2>
+<div class="two">
+<div><h3>Capacitación personalizada</h3><p>Te enseñamos a registrar tus datos, usar la herramienta y consultar tus resultados. Puede incluir al personal involucrado, según el alcance acordado.</p></div>
+<div><h3>Hasta 3 meses de mantenimiento correctivo</h3><p>Después de la entrega, corregimos fallos atribuibles a la solución entregada, como errores en cálculos o reportes que no funcionen según lo acordado.</p><p style="font-size:14px">No incluye nuevas funcionalidades, ampliaciones del alcance ni cambios importantes posteriores; estos pueden cotizarse por separado.</p></div>
+</div>
+</section>
+
+<section class="pg light">
+<div class="eye">05 · Inversión y próximos pasos</div>
+<h2>Así comenzamos.</h2>
+<ul class="cond">
+<li><b>50% de adelanto</b> para iniciar el proyecto.</li>
+<li><b>50% restante</b> contra entrega de la solución acordada.</li>
+<li>El plazo se confirma una vez definido el alcance.</li>
+<li>Las funcionalidades adicionales se cotizan por separado.</li>
+<li>Cualquier costo externo o licencia necesaria se comunica previamente.</li>
+<li>Los precios son por implementación, no mensualidades.</li>
+</ul>
+<div class="road">
+<div><span>01</span>Eliges tu alternativa</div>
+<div><span>02</span>Confirmamos el alcance</div>
+<div><span>03</span>Adelanto del 50%</div>
+<div><span>04</span>Desarrollo y entrega</div>
+<div><span>05</span>Pago del saldo</div>
+</div>
+<p class="close">Organiza tus números, entiende mejor tus resultados y dedica menos tiempo a los cálculos. Biko te acompaña para que la herramienta se adapte a ti, no al revés.</p>
+<div class="foot"><span>Biko Tech &amp; Business Solutions</span><span>Propuesta para NJ · 10 de octubre de 2026</span></div>
+</section>
+</body></html>
